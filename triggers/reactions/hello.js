@@ -15,14 +15,11 @@ module.exports = {
 
 	execute(message, args) {
 		// Put all your trigger code over here. This code will be executed when any of the element in the "name" array is found in the message content.
-        const provide_did = import('../../packages/use-composites/provide_did.js');
-        const ComposeClient = import("@composedb/client");
-        ComposeClient.setDID(provide_did.get_did());
 		message.channel.send({
 			content: "Gotcha - will remind you",
 		});
 
-		ComposeClient.executeQuery("TODO some query to save the message")
+		message.client.omposeClient.executeQuery("TODO some query to save the message")
 
 	},
 };
