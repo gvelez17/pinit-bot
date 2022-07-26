@@ -274,9 +274,9 @@ const commandJsonData = [
 
     try {
         console.log("Authenticating on Ceramic");
-        const provide_did = await import('./packages/use-composites/provide_did.js');
-        const did = provide_did.get_did();  // TODO attach this to client so we don't reload it later
-        client.did = did;
+        const provide_composites = await import('./packages/use-composites/provide_composites.js');
+        const composeClient = provide_did.get_composeClient();  // TODO attach this to client so we don't reload it later
+        client.composeClient = composeClient;
     } catch (error) {
         console.error(error);
     }

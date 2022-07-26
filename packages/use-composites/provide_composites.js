@@ -9,7 +9,7 @@ import { fromString } from 'uint8arrays';
 import { DID } from 'dids';
 
 import config from '../../config.json' assert { type: 'json' };
-//import {definition} from '../../runtime.definitions';
+import {definition} from '../../encoded.merged.composite.json';
 let definition = null;
 
 let did;
